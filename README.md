@@ -90,4 +90,3 @@ In the Unity Editor, additional buttons are available:
 
 --- 
 
-Этот текст подробно объясняет возможности и использование скрипта и может служить хорошей документацией для GitHub.
