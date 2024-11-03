@@ -1,4 +1,4 @@
-# Text Translation System for Unity
+# Text translation system for Unity
 
 A simple and efficient text translation system for Unity, designed to manage multilingual content in your Unity project. This script enables automatic detection of the device language, supports loading translations from a `.txt` file, and offers easy logging of translations in a structured format for exporting or editing.
 ##
@@ -7,6 +7,7 @@ A simple and efficient text translation system for Unity, designed to manage mul
 
 - **Automatic Language Detection**: Detects the system language on the first launch and applies it automatically.
 - **Easy Language Switching**: Allows switching languages dynamically in the game (Russian, English, and Turkish supported by default).
+- **In-Game Language Switching**: Use the TranslateText(string language) method to switch between languages instantly. Pass "ru" for Russian, "en" for English, or "tr" for Turkish. This updates all Text elements with the new language in real-time.
 - **Translation Logging and Exporting**: Generates a structured log of translations that can be copied directly to the clipboard.
 - **Loading Translations from File**: Supports loading translations from a `.txt` file in a structured format based on the element index.
 
@@ -21,6 +22,7 @@ The script manages text components and translations as follows:
    ```
    Unfilled or mismatched fields are updated with values from the file.
 3. **Logging**: Outputs all translations with indices in the same structured format to easily track and edit them.
+4. **In-Game Language Switching**: Use the TranslateText(string language) method to switch between languages instantly. Pass "ru" for Russian, "en" for English, or "tr" for Turkish. This updates all Text elements with the new language in real-time.
 
 ### Example `.txt` Format for Importing Translations
 
@@ -42,10 +44,11 @@ In the Unity Editor, additional buttons are available:
 - **Auto Fill Text Elements**: Automatically finds all `Text` components and fills them in the Inspector list.
 - **Print Translations to Console**: Logs all translations in a structured format and copies them to the clipboard.
 - **Load Translations From File**: Loads translations from a `.txt` file following the specified format.
+- **In-Game Language Change**: Use the TranslateText method to switch languages during gameplay. This allows users to dynamically change the language without reloading the scene.
 
 ---
 
-# Система Переводов Текста для Unity
+# Система перевода текста для Unity
 
 Простая и эффективная система перевода текста для Unity, разработанная для управления многоязычным контентом в вашем Unity-проекте. Скрипт автоматически определяет язык устройства, поддерживает загрузку переводов из `.txt` файла и предоставляет удобный формат для экспорта и редактирования переводов.
 ##
@@ -54,6 +57,7 @@ In the Unity Editor, additional buttons are available:
 
 - **Автоматическое Определение Языка**: Определяет язык системы при первом запуске и автоматически применяет его.
 - **Легкое Переключение Языка**: Позволяет динамически переключать язык в игре (по умолчанию поддерживаются русский, английский и турецкий).
+- **Изменение Языка в Игре: Меняйте язык прямо во время игры с помощью метода TranslateText(string language), который мгновенно обновляет все переводы.
 - **Логирование и Экспорт Переводов**: Создаёт структурированный лог переводов, который можно скопировать в буфер обмена.
 - **Загрузка Переводов из Файла**: Поддерживает загрузку переводов из `.txt` файла в структурированном формате на основе индекса элемента.
 
@@ -68,6 +72,7 @@ In the Unity Editor, additional buttons are available:
    ```
    Пустые или несоответствующие значения обновляются из файла.
 3. **Логирование**: Выводит все переводы с индексами в том же структурированном формате для удобного отслеживания и редактирования.
+4. **Переключение Языка в Игре**: Используйте метод TranslateText(string language) для переключения между языками в реальном времени. Укажите "ru" для русского, "en" для английского или "tr" для турецкого. Это обновит все элементы Text на новый язык прямо во время игры.
 
 ### Пример Формата `.txt` для Импорта Переводов
 
@@ -89,6 +94,6 @@ In the Unity Editor, additional buttons are available:
 - **Auto Fill Text Elements**: Автоматически находит все компоненты `Text` и добавляет их в список в инспекторе.
 - **Print Translations to Console**: Логирует все переводы в структурированном формате и копирует их в буфер обмена.
 - **Load Translations From File**: Загружает переводы из `.txt` файла в указанном формате.
-
+- **Изменение Языка в Игре**: Используйте метод TranslateText для динамического переключения языков во время игры, позволяя пользователям изменить язык без перезагрузки сцены.
 --- 
 
