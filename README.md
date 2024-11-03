@@ -1,6 +1,7 @@
 # Text Translation System for Unity
 
 A simple and efficient text translation system for Unity, designed to manage multilingual content in your Unity project. This script enables automatic detection of the device language, supports loading translations from a `.txt` file, and offers easy logging of translations in a structured format for exporting or editing.
+##
 ![Banner](inspector.png)
 ## Features
 
@@ -47,6 +48,7 @@ In the Unity Editor, additional buttons are available:
 # Система Переводов Текста для Unity
 
 Простая и эффективная система перевода текста для Unity, разработанная для управления многоязычным контентом в вашем Unity-проекте. Скрипт автоматически определяет язык устройства, поддерживает загрузку переводов из `.txt` файла и предоставляет удобный формат для экспорта и редактирования переводов.
+##
 ![Banner](inspector.png)
 ## Особенности
 
