@@ -125,6 +125,27 @@ public class TextTranslation : MonoBehaviour
         Debug.Log("Переводы скопированы в буфер обмена.");
     }
 
+    // Метод для вывода только элементов с незаполненными полями (английским или турецким)
+    public void PrintUnfilledTranslationsToConsole()
+    {
+        string unfilledTranslations = "";
+
+        for (int i = 0; i < textElements.Count; i++)
+        {
+            var item = textElements[i];
+            if (item.textElement != null && (string.IsNullOrEmpty(item.englishText) || string.IsNullOrEmpty(item.turkishText)))
+            {
+                string line = $"{i}-::(RU)%::-{item.russianText}-::(EN)%::-{item.englishText}-::(TR)%::-{item.turkishText}";
+                unfilledTranslations += line + "\n";
+            }
+        }
+
+        // Выводим только незаполненные переводы одним сообщением и копируем в буфер обмена
+        Debug.Log(unfilledTranslations);
+        GUIUtility.systemCopyBuffer = unfilledTranslations;
+        Debug.Log("Незаполненные переводы скопированы в буфер обмена.");
+    }
+
     public void AutoFillTextElements()
     {
         Text[] foundTexts = Resources.FindObjectsOfTypeAll<Text>();
@@ -174,6 +195,11 @@ public class TextTranslationEditor : Editor
         if (GUILayout.Button("Print Translations to Console"))
         {
             script.PrintTranslationsToConsole();
+        }
+
+        if (GUILayout.Button("Print Unfilled Translations to Console"))
+        {
+            script.PrintUnfilledTranslationsToConsole();
         }
 
         if (GUILayout.Button("Load Translations From File"))
